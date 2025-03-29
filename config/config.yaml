@@ -1,0 +1,20 @@
+root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion/
+  zip_path: artifacts/data_ingestion/zip/data.zip
+  extract_path: artifacts/data_ingestion/raw/raw.csv
+  dataset_name: vstepanenko/disaster-tweets
+
+data_transformation:
+  root_dir: artifacts/data_transformation/
+  x_path: artifacts/data_transformation/x.csv
+  y_path: artifacts/data_transformation/y.csv
+  raw_data_path: artifacts/data_ingestion/raw/raw.csv
+
+model_training:
+  root_dir: artifacts/models/
+  model_path: artifacts/models/model.keras
+
+prediction:
+  model_path: artifacts/models/model.keras
