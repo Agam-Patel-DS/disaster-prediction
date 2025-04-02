@@ -1,11 +1,14 @@
 import os
+from src.disaster_prediction import CustomLogger
+logger = CustomLogger().get_logger()
+
 def create_directory(directory_path):
     try:
         # Create the directory along with any intermediate directories if they don't exist
         os.makedirs(directory_path, exist_ok=True)
-        print(f"Directory '{directory_path}' created successfully!")
+        logger.info(f"Directory '{directory_path}' created successfully!")
     except Exception as e:
-        print(f"Error creating directory '{directory_path}': {e}")
+        logger.info(f"Error creating directory '{directory_path}': {e}")
 
 import yaml
 
@@ -21,8 +24,8 @@ def read_yaml(file_path):
             data = yaml.safe_load(file)
         return data
     except FileNotFoundError:
-        print(f"Error: File not found at {file_path}")
+        logger.info(f"Error: File not found at {file_path}")
         return None
     except yaml.YAMLError as e:
-        print(f"Error parsing YAML file: {e}")
+        logger.info(f"Error parsing YAML file: {e}")
         return None

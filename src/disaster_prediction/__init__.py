@@ -31,8 +31,6 @@ class CustomLogger:
         return self.logger
 
 
-# Usage Example:
-custom_logger = CustomLogger().get_logger()
 
 # Usage in another module:
 # from custom_logger import CustomLogger
