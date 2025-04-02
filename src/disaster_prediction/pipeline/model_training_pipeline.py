@@ -1,7 +1,7 @@
 from src.disaster_prediction.config.configuration import ConfigurationManager
 from src.disaster_prediction.components.model_training import ModelTraining
 
-def ModelTrainingPipeline():
+def ModelTrainingPipeline(x_train, x_test, y_train):
   config=ConfigurationManager()
   model_training_config=config.ModelTrainingManager()
   model_training=ModelTraining(model_training_config)

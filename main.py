@@ -1,7 +1,7 @@
 from src.disaster_prediction import CustomLogger
 from src.disaster_prediction.pipeline.data_ingestion_pipeline import DataIngestionPipeline
 from src.disaster_prediction.pipeline.data_transformation_pipeline import DataTransformationPipeline
-from src.disaster_prediction.pipeline.mode_training_pipeline import ModelTrainingPipeline
+from src.disaster_prediction.pipeline.model_training_pipeline import ModelTrainingPipeline
 
 
 logger = CustomLogger().get_logger()
